@@ -1,0 +1,7 @@
+c:\users\jkulkarni\source\repos\testHackerRank\testHackerRank\obj\Debug\testHackerRank.csproj.CoreCompileInputs.cache
+C:\Users\jkulkarni\source\repos\testHackerRank\testHackerRank\bin\Debug\testHackerRank.exe.config
+C:\Users\jkulkarni\source\repos\testHackerRank\testHackerRank\bin\Debug\testHackerRank.exe
+C:\Users\jkulkarni\source\repos\testHackerRank\testHackerRank\bin\Debug\testHackerRank.pdb
+C:\Users\jkulkarni\source\repos\testHackerRank\testHackerRank\obj\Debug\testHackerRank.exe
+C:\Users\jkulkarni\source\repos\testHackerRank\testHackerRank\obj\Debug\testHackerRank.pdb
+C:\Users\jkulkarni\source\repos\testHackerRank\testHackerRank\obj\Debug\testHackerRank.csprojAssemblyReference.cache
