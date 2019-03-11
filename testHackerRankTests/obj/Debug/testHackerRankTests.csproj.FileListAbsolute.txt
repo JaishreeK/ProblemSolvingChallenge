@@ -15,3 +15,5 @@ C:\Users\jkulkarni\source\repos\testHackerRank\testHackerRankTests\bin\Debug\Mic
 C:\Users\jkulkarni\source\repos\testHackerRank\testHackerRankTests\obj\Debug\testHackerRankTests.csproj.CopyComplete
 C:\Users\jkulkarni\source\repos\testHackerRank\testHackerRankTests\obj\Debug\testHackerRankTests.dll
 C:\Users\jkulkarni\source\repos\testHackerRank\testHackerRankTests\obj\Debug\testHackerRankTests.pdb
+C:\Users\jkulkarni\source\repos\ProblemSolvingChallenge\testHackerRankTests\obj\Debug\testHackerRankTests.dll
+C:\Users\jkulkarni\source\repos\ProblemSolvingChallenge\testHackerRankTests\obj\Debug\testHackerRankTests.pdb
