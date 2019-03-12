@@ -93,7 +93,44 @@ namespace testHackerRank
         //            roundedVal[i] = grades[i] + (5 - grades[i] % 5);
         //    }
         //    return roundedVal;
-        //}                
+        //}      
+        
+            
+         // Complete the sockMerchant function below.
+         static long VeryBigSum(int[] ar)
+        {
+           int size = ar.Length;
+           long sum = 0;
+            for (int i = 0; i < size; i++)
+            {
+                 sum +=ar[i];
+            }
+            return sum;
+        } 
+        
+
+         // Complete the diagonalDifference function below.
+        public static int diagonalDifference(int[,] arr) {
+
+            int rows = arr.GetLength(0);
+            int cols = rows;        
+            int sumDia1 =0,sumDia2=0;            
+            for(int i=0;i<rows;i++)
+            {
+                sumDia1+=arr[i,i];
+            }
+            for(int i=0;i<rows;i++)
+            {
+                if (cols >= 0)
+                {
+                    sumDia2 += arr[i, cols - 1];
+                    cols--;
+                }
+                else
+                    break;
+            }
+            return Math.Abs(sumDia1-sumDia2);    
+        }
         
     }
 }
