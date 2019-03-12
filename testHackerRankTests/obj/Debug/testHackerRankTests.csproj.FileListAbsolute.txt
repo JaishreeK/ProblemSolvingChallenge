@@ -17,3 +17,15 @@ C:\Users\jkulkarni\source\repos\testHackerRank\testHackerRankTests\obj\Debug\tes
 C:\Users\jkulkarni\source\repos\testHackerRank\testHackerRankTests\obj\Debug\testHackerRankTests.pdb
 C:\Users\jkulkarni\source\repos\ProblemSolvingChallenge\testHackerRankTests\obj\Debug\testHackerRankTests.dll
 C:\Users\jkulkarni\source\repos\ProblemSolvingChallenge\testHackerRankTests\obj\Debug\testHackerRankTests.pdb
+C:\Users\jkulkarni\source\repos\ProblemSolvingChallenge\testHackerRankTests\obj\Debug\testHackerRankTests.csprojAssemblyReference.cache
+C:\Users\jkulkarni\source\repos\ProblemSolvingChallenge\testHackerRankTests\obj\Debug\testHackerRankTests.csproj.CoreCompileInputs.cache
+C:\Users\jkulkarni\source\repos\ProblemSolvingChallenge\testHackerRankTests\bin\Debug\testHackerRankTests.dll
+C:\Users\jkulkarni\source\repos\ProblemSolvingChallenge\testHackerRankTests\bin\Debug\testHackerRankTests.pdb
+C:\Users\jkulkarni\source\repos\ProblemSolvingChallenge\testHackerRankTests\bin\Debug\testHackerRank.exe
+C:\Users\jkulkarni\source\repos\ProblemSolvingChallenge\testHackerRankTests\bin\Debug\testHackerRank.pdb
+C:\Users\jkulkarni\source\repos\ProblemSolvingChallenge\testHackerRankTests\bin\Debug\testHackerRank.exe.config
+C:\Users\jkulkarni\source\repos\ProblemSolvingChallenge\testHackerRankTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\jkulkarni\source\repos\ProblemSolvingChallenge\testHackerRankTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\jkulkarni\source\repos\ProblemSolvingChallenge\testHackerRankTests\obj\Debug\testHackerRankTests.csproj.CopyComplete
+C:\Users\jkulkarni\source\repos\ProblemSolvingChallenge\testHackerRankTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\jkulkarni\source\repos\ProblemSolvingChallenge\testHackerRankTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll

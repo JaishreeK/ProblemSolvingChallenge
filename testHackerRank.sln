@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testHackerRank", "testHacke
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testHackerRankTests", "testHackerRankTests\testHackerRankTests.csproj", "{02F1D68D-6AA8-48AF-B642-68305ACE24E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testHackerRankTests1", "testHackerRankTests1\testHackerRankTests1.csproj", "{AD11C399-832D-43EA-8961-63561D624055}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

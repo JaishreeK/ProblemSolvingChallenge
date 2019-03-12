@@ -110,22 +110,26 @@ namespace testHackerRank
         
 
          // Complete the diagonalDifference function below.
-        public static int diagonalDifference(int[][] arr) {
+        public static int diagonalDifference(int[,] arr) {
 
-            int rows = arr.Length;
-            int cols = rows;
-            int sumDia1 =0;
-            int sumDia2=0;
+            int rows = arr.GetLength(0);
+            int cols = rows;        
+            int sumDia1 =0,sumDia2=0;            
             for(int i=0;i<rows;i++)
-                for(int j=0;j<cols;j++)
+            {
+                sumDia1+=arr[i,i];
+            }
+            for(int i=0;i<rows;i++)
+            {
+                if (cols >= 0)
                 {
-                    if(i==j)
-                        sumDia1+=arr[i][j];
-                    else if(j-i==Math.Abs(rows-1))
-                        sumDia2+=arr[i][j];
-                }                   
-            return Math.Abs(sumDia1-sumDia2);
-
+                    sumDia2 += arr[i, cols - 1];
+                    cols--;
+                }
+                else
+                    break;
+            }
+            return Math.Abs(sumDia1-sumDia2);    
         }
         
     }
