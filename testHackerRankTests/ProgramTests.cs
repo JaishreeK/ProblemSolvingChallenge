@@ -19,14 +19,20 @@ namespace testHackerRank.Tests
         //}
 
 
-        [TestMethod()]
-        public void diagonalDifferenceTest()
-        {
-            int Value = Program.diagonalDifference(new int[3,3] {
-                { 11, 2, 4 },
-                { 4, 5, 6 },
-                { 10, 8, -12 }  });
+        //[TestMethod()]
+        //public void diagonalDifferenceTest()
+        //{
+        //    int Value = Program.diagonalDifference(new int[3,3] {
+        //        { 11, 2, 4 },
+        //        { 4, 5, 6 },
+        //        { 10, 8, -12 }  });
             
+        //}
+
+        [TestMethod()]
+        public void plusMinusTest()
+        {
+           Program.plusMinus(new int[6] { -4, 3, - 9, 0, 4, 1 });
         }
 
         //[TestMethod()]

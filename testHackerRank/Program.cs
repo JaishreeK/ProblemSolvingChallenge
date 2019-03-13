@@ -131,6 +131,27 @@ namespace testHackerRank
             }
             return Math.Abs(sumDia1-sumDia2);    
         }
-        
+
+
+        // Complete the plusMinus function below.
+        public static void plusMinus(int[] arr)
+        {
+            int n = arr.Length;
+            int count0 = 0, countP = 0, countN = 0;
+            for (int i = 0; i < n; i++)
+            {
+                if (arr[i] == 0)
+                    count0 += 1;
+                else if(arr[i] < 0)
+                    countN += 1;
+                else
+                    countP += 1;
+            }
+           
+            Console.WriteLine("{0:0.000000}", (double)countP / n);
+            Console.WriteLine("{0:0.000000}", (double)countN / n);
+            Console.WriteLine("{0:0.000000}", (double)count0 / n);
+        }
+
     }
 }
