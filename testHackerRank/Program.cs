@@ -153,5 +153,58 @@ namespace testHackerRank
             Console.WriteLine("{0:0.000000}", (double)count0 / n);
         }
 
+        // Complete the staircase function below.
+        public static void Staircase(int n)
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                string hashStr = "";
+                string spaceStr = "";
+                //insert n-i spaces and i #
+                int spaceCnt = n - i;
+                int hashCount = i;
+
+                for (int p = 1; p <= n - i; p++)
+                    spaceStr = spaceStr + " ";
+
+
+                while (hashCount > 0)
+                {
+                    hashStr = hashStr + "#";
+                    hashCount--;
+                }
+                Console.WriteLine(spaceStr + hashStr);
+            }
+        }
+
+
+        public static void EasyFormatting(int n)
+        {
+            for (int i = 0; i < n; i++)
+                Console.WriteLine(new String('#', i + 1).PadLeft(n, ' '));
+        }
+
+        // Complete the miniMaxSum function below.
+        static void miniMaxSum(int[] arr)
+        {
+            //sample input 1,2,3,4,5  //output 10,14
+
+            //use int64 datatypes for sum
+            Int64 sum = 0;
+            Int64 min=Int64.MaxValue, max = Int64.MinValue;
+                      
+            for(int i=0;i<5;i++)
+            {
+                sum = sum + arr[i];
+
+                if (arr[i] < min)
+                    min = arr[i];
+
+                if (arr[i] > max)
+                    max = arr[i];
+            }          
+            Console.WriteLine(sum - max + ":MinSum");
+            Console.WriteLine(sum - min + ":MaxSum");
+        }
     }
 }
