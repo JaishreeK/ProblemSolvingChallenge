@@ -206,5 +206,26 @@ namespace testHackerRank
             Console.WriteLine(sum - max + ":MinSum");
             Console.WriteLine(sum - min + ":MaxSum");
         }
+        
+        // Complete the birthdayCakeCandles function below.
+        public static int birthdayCakeCandles(int[] ar)
+        {
+            int maxCount = 0;
+            int max = 0;            
+            for(int i=0;i<ar.Length;i++)
+            {
+                if (max < ar[i])
+                {
+                    max = ar[i];
+                    maxCount++;
+                }
+                else if(max==ar[i])
+                {
+                    maxCount++;
+                }
+            }
+            return maxCount;
+
+        }
     }
 }
