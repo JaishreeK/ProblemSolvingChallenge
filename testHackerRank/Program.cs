@@ -227,5 +227,29 @@ namespace testHackerRank
             return maxCount;
 
         }
+
+        /*
+    * Complete the timeConversion function below.
+    */
+        static string timeConversion(string s)
+        {
+            string timeString24 = "";
+            string amorPM = s.Substring(8, 2);
+            s = s.Remove(8, 2);
+            string[] times = s.Split(':');
+            int hh = int.Parse(times[0]);
+            if (amorPM == "AM")
+            {
+                if (hh == 12)
+                    times[0] = "00";
+            }
+            else
+            {
+                if (hh<12)          
+                    times[0] = (hh + 12).ToString();                
+            }
+            timeString24 = string.Join(":", times);
+            return timeString24;
+        }
     }
 }
