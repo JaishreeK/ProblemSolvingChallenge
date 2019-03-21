@@ -251,5 +251,78 @@ namespace testHackerRank
             timeString24 = string.Join(":", times);
             return timeString24;
         }
+
+        static int getTotalX(int[] a, int[] b)
+        {
+            int f = lcm(a);
+            int l = gcd(b);
+            int count = 0;
+            for (int i = f, j = 2; i <= l; i = f * j, j++)
+            {
+                if (l % i == 0) { count++; }
+            }
+            return count;
+        }
+
+        private static int gcd(int[] a)
+        { 
+            
+            int FirstVal = a[0];
+            for(int i=1;i<a.Length;i++)
+            {
+               FirstVal= gcd(FirstVal, a[i]);
+            }
+            return FirstVal;
+        }
+
+        private static int gcd(int a, int b)
+        {
+            int temp;
+            while (b != 0)
+            {
+                temp = b;
+                b = a % b;
+                a = temp;
+            }
+           return a;
+        }
+
+        private static int lcm(int a, int b)
+        {
+            return a * (b / gcd(a, b));
+        }
+
+        private static int lcm(int[] input)
+        {
+            int result = input[0];
+            for (int i = 1; i < input.Length; i++)
+            {
+                result = lcm(result, input[i]);
+            }
+            return result;
+        }
+
+
+        // Complete the breakingRecords function below.
+        public static int[] breakingRecords(int[] scores)
+        {
+            int[] minMaxScores = new int[2] { 0, 0 };
+            int min = scores[0];
+            int max = scores[0];
+            for (int i = 1; i < scores.Length; i++)
+            {
+                if (scores[i] > max)
+                {
+                    max = scores[i];
+                    minMaxScores[1]++;
+                }
+                else if (scores[i] < min)
+                {
+                    min = scores[i];
+                    minMaxScores[0]++;
+                }                
+            }
+            return minMaxScores;
+        }
     }
 }

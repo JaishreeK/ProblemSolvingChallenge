@@ -35,10 +35,17 @@ namespace testHackerRank.Tests
         //    Program.plusMinus(new int[6] { -4, 3, -9, 0, 4, 1 });
         //}
 
+        //[TestMethod()]
+        //public void birthdayCakeCandlesTest()
+        //{
+        //    Program.birthdayCakeCandles(new int[4] { 3, 2, 1, 3 });
+        //    //Assert.Fail();
+        //}
+
         [TestMethod()]
-        public void birthdayCakeCandlesTest()
+        public void breakingRecordsTest()
         {
-            Program.birthdayCakeCandles(new int[4] { 3, 2, 1, 3 });
+            Program.breakingRecords(new int[4] {12, 24, 10, 24});
             //Assert.Fail();
         }
 
