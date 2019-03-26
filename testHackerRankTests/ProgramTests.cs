@@ -42,12 +42,45 @@ namespace testHackerRank.Tests
         //    //Assert.Fail();
         //}
 
+        //[TestMethod()]
+        //public void breakingRecordsTest()
+        //{
+        //    Program.breakingRecords(new int[4] {12, 24, 10, 24});
+        //    //Assert.Fail();
+        //}
+
+        //[TestMethod()]
+        //public void BirthdayChocTest()
+        //{
+        //    List<int> testInput = new List<int>() { 2, 5, 1, 3, 4, 4, 3, 5, 1, 1, 2, 1, 4, 1, 3, 3, 4, 2, 1 };
+        //    //new int[5] { 1, 2, 1, 3, 2 }        //    
+        //    int count = Program.birthdayChoc(testInput, 18, 7);
+        //    Assert.AreEqual(3, count);
+        //}
+
+        //[TestMethod()]
+        //public void divisibleSumPairsTest()
+        //{
+        //    int count = Program.divisibleSumPairs(6, 3, new int[] { 1, 3, 2, 6, 1, 2 });
+        //    Assert.AreEqual(count, 5);
+        //}
+
         [TestMethod()]
-        public void breakingRecordsTest()
+        public void migratoryBirdsTest()
         {
-            Program.breakingRecords(new int[4] {12, 24, 10, 24});
-            //Assert.Fail();
+            int count = Program.migratoryBirds(new List<int>() { 1, 4, 4, 4, 5, 3 });
+            Assert.AreEqual(4,count);
         }
+
+        ////[TestMethod()]
+        ////public void BirthdayChocTest()
+        ////{
+        ////    List<int> testInput = new List<int>();            
+        ////    testInput.Add(4);          
+        ////    Program.birthdayChoc(testInput, 4, 1);
+        ////    //Assert.Fail();
+        ////}
+
 
         //[TestMethod()]
         //public void countApplesAndOrangesTest()

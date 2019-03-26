@@ -324,5 +324,57 @@ namespace testHackerRank
             }
             return minMaxScores;
         }
-    }
+
+        // Complete the birthday function below.
+        public static int birthdayChoc(List<int> s, int d, int m)
+        {
+            int sumD=0, count = 0;      
+            for (int i = 0; i < s.Count; i++)
+            {
+                sumD = sumD + s[i];
+                if (i > m - 1)
+                    sumD -= s[i - m];
+                if(i>=m-1 && sumD==d)
+                    count++;               
+            }
+           
+            return count;
+        }
+
+
+        // Complete the divisibleSumPairs function below.
+        public static int divisibleSumPairs(int n, int k, int[] ar)
+        {
+            int count = 0, sum;
+            for (int i = 0; i < n; i++)
+            {
+                sum = ar[i];
+                for (int j = i+1; j < n; j++)
+                {
+                    if ((sum + ar[j]) % k == 0)
+                        count++;              
+
+                }
+            }
+            return count;
+
+        }
+
+        // Complete the migratoryBirds function below.
+        public static int migratoryBirds(List<int> arr)
+        {
+            Dictionary<int, int> dictBirdsCounts = new Dictionary<int, int>();
+            foreach (var item in arr)
+            {
+                if (dictBirdsCounts.ContainsKey(item))
+                    dictBirdsCounts[item] += 1;
+                else
+                    dictBirdsCounts.Add(item, 1);
+            }
+            //return dictBirdsCounts.OrderBy(x=>x.Key).Max(x=>x.Value);
+            int max = dictBirdsCounts.OrderBy(x => x.Key).OrderByDescending(x => x.Value).First().Key;
+            return max;
+        }
+    }   
+    
 }
