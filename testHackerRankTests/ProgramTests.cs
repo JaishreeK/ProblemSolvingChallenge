@@ -65,11 +65,18 @@ namespace testHackerRank.Tests
         //    Assert.AreEqual(count, 5);
         //}
 
+        //[TestMethod()]
+        //public void migratoryBirdsTest()
+        //{
+        //    int count = Program.migratoryBirds(new List<int>() { 1, 4, 4, 4, 5, 3 });
+        //    Assert.AreEqual(4, count);
+        //}
+
         [TestMethod()]
-        public void migratoryBirdsTest()
+        public void dayOfProgrammerTest()
         {
-            int count = Program.migratoryBirds(new List<int>() { 1, 4, 4, 4, 5, 3 });
-            Assert.AreEqual(4,count);
+            string strDate = Program.dayOfProgrammer(2000);
+            Assert.AreEqual("12.09.2000", strDate);
         }
 
         ////[TestMethod()]

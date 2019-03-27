@@ -372,8 +372,44 @@ namespace testHackerRank
                     dictBirdsCounts.Add(item, 1);
             }
             //return dictBirdsCounts.OrderBy(x=>x.Key).Max(x=>x.Value);
-            int max = dictBirdsCounts.OrderBy(x => x.Key).OrderByDescending(x => x.Value).First().Key;
+            int max = dictBirdsCounts.OrderBy(x => x.Key)
+                    .OrderByDescending(x => x.Value)
+                    .First().Key;
             return max;
+        }
+
+
+        // Complete the dayOfProgrammer function below.
+        public static string dayOfProgrammer(int year)
+        {
+            if (year < 1918)
+            {
+                if (year % 4 == 0)
+                    return new DateTime(year, 9, 12).ToString("dd.MM.yyyy");
+                else
+                    return new DateTime(year, 9, 13).ToString("dd.MM.yyyy");
+
+            }
+            else if (year == 1918)
+            {
+                return new DateTime(year, 9, 26).ToString("dd.MM.yyyy");
+            }
+            else
+            {
+
+                if ((year % 4 == 0) && (!(year % 100 == 0)))
+                    return new DateTime(year, 9, 12).ToString("dd.MM.yyyy");
+                else
+                {
+                    //check for 1800
+                    if (year % 400 == 0)
+                        return new DateTime(year, 9, 12).ToString("dd.MM.yyyy");
+                    else
+                        return new DateTime(year, 9, 13).ToString("dd.MM.yyyy");
+                }
+
+            }
+
         }
     }   
     
