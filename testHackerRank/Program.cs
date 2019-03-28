@@ -409,6 +409,20 @@ namespace testHackerRank
                 }
 
             }
+        }
+
+        // Complete the bonAppetit function below.
+        public static void bonAppetit(List<int> bill, int k, int b)
+        {
+            int bCharged, bPaid;
+            bPaid = b;
+            bill.RemoveAt(k);
+            bCharged = (int)bill.Sum() / 2;
+            if (bCharged - bPaid == 0)
+                Console.WriteLine("Bon Appetit");
+            else
+                Console.WriteLine((bCharged - bPaid).ToString());
+
 
         }
     }   

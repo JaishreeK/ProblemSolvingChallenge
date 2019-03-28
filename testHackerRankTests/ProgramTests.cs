@@ -72,11 +72,19 @@ namespace testHackerRank.Tests
         //    Assert.AreEqual(4, count);
         //}
 
+        //[TestMethod()]
+        //public void dayOfProgrammerTest()
+        //{
+        //    string strDate = Program.dayOfProgrammer(2000);
+        //    Assert.AreEqual("12.09.2000", strDate);
+        //}        
+
         [TestMethod()]
-        public void dayOfProgrammerTest()
+        public void bonAppetitTest()
         {
-            string strDate = Program.dayOfProgrammer(2000);
-            Assert.AreEqual("12.09.2000", strDate);
+            List<int> testInput = new List<int>() { 3, 10, 2, 9 };
+            Program.bonAppetit(testInput, 1, 12);
+           
         }
 
         ////[TestMethod()]
