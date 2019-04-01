@@ -19,15 +19,83 @@ namespace testHackerRank.Tests
         //}
 
 
+        //[TestMethod()]
+        //public void diagonalDifferenceTest()
+        //{
+        //    int Value = Program.diagonalDifference(new int[3,3] {
+        //        { 11, 2, 4 },
+        //        { 4, 5, 6 },
+        //        { 10, 8, -12 }  });
+
+        //}
+
+        //[TestMethod()]
+        //public void plusMinusTest()
+        //{
+        //    Program.plusMinus(new int[6] { -4, 3, -9, 0, 4, 1 });
+        //}
+
+        //[TestMethod()]
+        //public void birthdayCakeCandlesTest()
+        //{
+        //    Program.birthdayCakeCandles(new int[4] { 3, 2, 1, 3 });
+        //    //Assert.Fail();
+        //}
+
+        //[TestMethod()]
+        //public void breakingRecordsTest()
+        //{
+        //    Program.breakingRecords(new int[4] {12, 24, 10, 24});
+        //    //Assert.Fail();
+        //}
+
+        //[TestMethod()]
+        //public void BirthdayChocTest()
+        //{
+        //    List<int> testInput = new List<int>() { 2, 5, 1, 3, 4, 4, 3, 5, 1, 1, 2, 1, 4, 1, 3, 3, 4, 2, 1 };
+        //    //new int[5] { 1, 2, 1, 3, 2 }        //    
+        //    int count = Program.birthdayChoc(testInput, 18, 7);
+        //    Assert.AreEqual(3, count);
+        //}
+
+        //[TestMethod()]
+        //public void divisibleSumPairsTest()
+        //{
+        //    int count = Program.divisibleSumPairs(6, 3, new int[] { 1, 3, 2, 6, 1, 2 });
+        //    Assert.AreEqual(count, 5);
+        //}
+
+        //[TestMethod()]
+        //public void migratoryBirdsTest()
+        //{
+        //    int count = Program.migratoryBirds(new List<int>() { 1, 4, 4, 4, 5, 3 });
+        //    Assert.AreEqual(4, count);
+        //}
+
+        //[TestMethod()]
+        //public void dayOfProgrammerTest()
+        //{
+        //    string strDate = Program.dayOfProgrammer(2000);
+        //    Assert.AreEqual("12.09.2000", strDate);
+        //}        
+
         [TestMethod()]
-        public void diagonalDifferenceTest()
+        public void bonAppetitTest()
         {
-            int Value = Program.diagonalDifference(new int[3,3] {
-                { 11, 2, 4 },
-                { 4, 5, 6 },
-                { 10, 8, -12 }  });
-            
+            List<int> testInput = new List<int>() { 3, 10, 2, 9 };
+            Program.bonAppetit(testInput, 1, 12);
+           
         }
+
+        ////[TestMethod()]
+        ////public void BirthdayChocTest()
+        ////{
+        ////    List<int> testInput = new List<int>();            
+        ////    testInput.Add(4);          
+        ////    Program.birthdayChoc(testInput, 4, 1);
+        ////    //Assert.Fail();
+        ////}
+
 
         //[TestMethod()]
         //public void countApplesAndOrangesTest()

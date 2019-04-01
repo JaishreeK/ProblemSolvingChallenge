@@ -131,6 +131,300 @@ namespace testHackerRank
             }
             return Math.Abs(sumDia1-sumDia2);    
         }
+
+
+        // Complete the plusMinus function below.
+        public static void plusMinus(int[] arr)
+        {
+            int n = arr.Length;
+            int count0 = 0, countP = 0, countN = 0;
+            for (int i = 0; i < n; i++)
+            {
+                if (arr[i] == 0)
+                    count0 += 1;
+                else if(arr[i] < 0)
+                    countN += 1;
+                else
+                    countP += 1;
+            }
+           
+            Console.WriteLine("{0:0.000000}", (double)countP / n);
+            Console.WriteLine("{0:0.000000}", (double)countN / n);
+            Console.WriteLine("{0:0.000000}", (double)count0 / n);
+        }
+
+        // Complete the staircase function below.
+        public static void Staircase(int n)
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                string hashStr = "";
+                string spaceStr = "";
+                //insert n-i spaces and i #
+                int spaceCnt = n - i;
+                int hashCount = i;
+
+                for (int p = 1; p <= n - i; p++)
+                    spaceStr = spaceStr + " ";
+
+
+                while (hashCount > 0)
+                {
+                    hashStr = hashStr + "#";
+                    hashCount--;
+                }
+                Console.WriteLine(spaceStr + hashStr);
+            }
+        }
+
+
+        public static void EasyFormatting(int n)
+        {
+            for (int i = 0; i < n; i++)
+                Console.WriteLine(new String('#', i + 1).PadLeft(n, ' '));
+        }
+
+        // Complete the miniMaxSum function below.
+        static void miniMaxSum(int[] arr)
+        {
+            //sample input 1,2,3,4,5  //output 10,14
+
+            //use int64 datatypes for sum
+            Int64 sum = 0;
+            Int64 min=Int64.MaxValue, max = Int64.MinValue;
+                      
+            for(int i=0;i<5;i++)
+            {
+                sum = sum + arr[i];
+
+                if (arr[i] < min)
+                    min = arr[i];
+
+                if (arr[i] > max)
+                    max = arr[i];
+            }          
+            Console.WriteLine(sum - max + ":MinSum");
+            Console.WriteLine(sum - min + ":MaxSum");
+        }
         
-    }
+        // Complete the birthdayCakeCandles function below.
+        public static int birthdayCakeCandles(int[] ar)
+        {
+            int maxCount = 0;
+            int max = 0;            
+            for(int i=0;i<ar.Length;i++)
+            {
+                if (max < ar[i])
+                {
+                    max = ar[i];
+                    maxCount++;
+                }
+                else if(max==ar[i])
+                {
+                    maxCount++;
+                }
+            }
+            return maxCount;
+
+        }
+
+        /*
+    * Complete the timeConversion function below.
+    */
+        static string timeConversion(string s)
+        {
+            string timeString24 = "";
+            string amorPM = s.Substring(8, 2);
+            s = s.Remove(8, 2);
+            string[] times = s.Split(':');
+            int hh = int.Parse(times[0]);
+            if (amorPM == "AM")
+            {
+                if (hh == 12)
+                    times[0] = "00";
+            }
+            else
+            {
+                if (hh<12)          
+                    times[0] = (hh + 12).ToString();                
+            }
+            timeString24 = string.Join(":", times);
+            return timeString24;
+        }
+
+        static int getTotalX(int[] a, int[] b)
+        {
+            int f = lcm(a);
+            int l = gcd(b);
+            int count = 0;
+            for (int i = f, j = 2; i <= l; i = f * j, j++)
+            {
+                if (l % i == 0) { count++; }
+            }
+            return count;
+        }
+
+        private static int gcd(int[] a)
+        { 
+            
+            int FirstVal = a[0];
+            for(int i=1;i<a.Length;i++)
+            {
+               FirstVal= gcd(FirstVal, a[i]);
+            }
+            return FirstVal;
+        }
+
+        private static int gcd(int a, int b)
+        {
+            int temp;
+            while (b != 0)
+            {
+                temp = b;
+                b = a % b;
+                a = temp;
+            }
+           return a;
+        }
+
+        private static int lcm(int a, int b)
+        {
+            return a * (b / gcd(a, b));
+        }
+
+        private static int lcm(int[] input)
+        {
+            int result = input[0];
+            for (int i = 1; i < input.Length; i++)
+            {
+                result = lcm(result, input[i]);
+            }
+            return result;
+        }
+
+
+        // Complete the breakingRecords function below.
+        public static int[] breakingRecords(int[] scores)
+        {
+            int[] minMaxScores = new int[2] { 0, 0 };
+            int min = scores[0];
+            int max = scores[0];
+            for (int i = 1; i < scores.Length; i++)
+            {
+                if (scores[i] > max)
+                {
+                    max = scores[i];
+                    minMaxScores[1]++;
+                }
+                else if (scores[i] < min)
+                {
+                    min = scores[i];
+                    minMaxScores[0]++;
+                }                
+            }
+            return minMaxScores;
+        }
+
+        // Complete the birthday function below.
+        public static int birthdayChoc(List<int> s, int d, int m)
+        {
+            int sumD=0, count = 0;      
+            for (int i = 0; i < s.Count; i++)
+            {
+                sumD = sumD + s[i];
+                if (i > m - 1)
+                    sumD -= s[i - m];
+                if(i>=m-1 && sumD==d)
+                    count++;               
+            }
+           
+            return count;
+        }
+
+
+        // Complete the divisibleSumPairs function below.
+        public static int divisibleSumPairs(int n, int k, int[] ar)
+        {
+            int count = 0, sum;
+            for (int i = 0; i < n; i++)
+            {
+                sum = ar[i];
+                for (int j = i+1; j < n; j++)
+                {
+                    if ((sum + ar[j]) % k == 0)
+                        count++;              
+
+                }
+            }
+            return count;
+
+        }
+
+        // Complete the migratoryBirds function below.
+        public static int migratoryBirds(List<int> arr)
+        {
+            Dictionary<int, int> dictBirdsCounts = new Dictionary<int, int>();
+            foreach (var item in arr)
+            {
+                if (dictBirdsCounts.ContainsKey(item))
+                    dictBirdsCounts[item] += 1;
+                else
+                    dictBirdsCounts.Add(item, 1);
+            }
+            //return dictBirdsCounts.OrderBy(x=>x.Key).Max(x=>x.Value);
+            int max = dictBirdsCounts.OrderBy(x => x.Key)
+                    .OrderByDescending(x => x.Value)
+                    .First().Key;
+            return max;
+        }
+
+
+        // Complete the dayOfProgrammer function below.
+        public static string dayOfProgrammer(int year)
+        {
+            if (year < 1918)
+            {
+                if (year % 4 == 0)
+                    return new DateTime(year, 9, 12).ToString("dd.MM.yyyy");
+                else
+                    return new DateTime(year, 9, 13).ToString("dd.MM.yyyy");
+
+            }
+            else if (year == 1918)
+            {
+                return new DateTime(year, 9, 26).ToString("dd.MM.yyyy");
+            }
+            else
+            {
+
+                if ((year % 4 == 0) && (!(year % 100 == 0)))
+                    return new DateTime(year, 9, 12).ToString("dd.MM.yyyy");
+                else
+                {
+                    //check for 1800
+                    if (year % 400 == 0)
+                        return new DateTime(year, 9, 12).ToString("dd.MM.yyyy");
+                    else
+                        return new DateTime(year, 9, 13).ToString("dd.MM.yyyy");
+                }
+
+            }
+        }
+
+        // Complete the bonAppetit function below.
+        public static void bonAppetit(List<int> bill, int k, int b)
+        {
+            int bCharged, bPaid;
+            bPaid = b;
+            bill.RemoveAt(k);
+            bCharged = (int)bill.Sum() / 2;
+            if (bCharged - bPaid == 0)
+                Console.WriteLine("Bon Appetit");
+            else
+                Console.WriteLine((bCharged - bPaid).ToString());
+
+
+        }
+    }   
+    
 }
