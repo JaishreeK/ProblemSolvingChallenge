@@ -29,7 +29,25 @@ namespace testHackerRank
             //tw.Flush();
             //tw.Close();
             //Tuple<int, int> counts = countApplesAndOranges(s, t, a, b, apples, oranges);
-            return ;
+
+
+            //Read inputs from console into 2D array:
+        int m=5;
+		int[,] queries = new int[m,2];   
+		string[] queryTemp = new string[m];
+        for (int i = 0; i < m; i++) 
+        {
+            queryTemp = Console.ReadLine().Split(' ');
+            for (int j = 0; j < 2; j++) 
+            {                 
+                queries[i, j] = Convert.ToInt32(queryTemp[j]);      
+            } 
+        }
+
+        int rowCnt = queries.GetLength(0);
+        int colCnt = queries.GetLength(1);
+
+        return ;
        }
 
 
@@ -80,7 +98,7 @@ namespace testHackerRank
             return countAnO;
         }
 
-        // Complete the sockMerchant function below.
+        // Complete the GradingStudent function below.
         //public static int[] gradingStudents(int[] grades)
         //{
         //    int size = grades.Length;
